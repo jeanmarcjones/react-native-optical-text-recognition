@@ -1,8 +1,9 @@
 import { NativeModules } from 'react-native';
 
-type OpticalTextRecognitionType = {
+interface OpticalTextRecognitionType {
   multiply(a: number, b: number): Promise<number>;
-};
+  detectFromUri(uri: string): Promise<string>;
+}
 
 const { OpticalTextRecognition } = NativeModules;
 
